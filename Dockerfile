@@ -13,4 +13,4 @@ RUN pip3 install --upgrade pip && \
 ADD . /opt/app/
 WORKDIR /opt/app
 
-ENTRYPOINT ["python", "ingest.py"]
+CMD python ingest.py
