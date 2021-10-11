@@ -14,12 +14,16 @@ cd docebo-test
 Before spawning the containers, make sure you don't have any service listening
 at port 3306, e.g. `sudo /etc/init.d/mysql stop`.
 
+Additionally, make sure to copy into the root folder of the cloned repository
+the `.env` file provided by email.
+
 Deploy the containers (not in daemon mode in order for logs to be visible):
 ```shell
 docker-compose up
 ```
 
-open a new shell and log into MySQL db (use the password provided by email)****
+open a new shell and log into MySQL db
+(use the `MYSQL_ROOT_PASSWORD` specified in the `.env` file)
 ```shell
 docker exec -it docebo-test-db-1 mysql -uroot -p
 ```
